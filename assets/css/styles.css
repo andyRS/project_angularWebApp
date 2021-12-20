@@ -551,14 +551,17 @@ textarea{
        padding-top: 35px;
     }
 
-    .menu-responsivo img{
+  .menu-responsivo img {
         display: block;
-        width: 48px;
+        width: 39px;
         left: 429px;
-        top: 24px;
-        overflow: hidden;  
+        margin: 0px;
+        padding: 0px;
+        top: 29px;
+        
+        overflow: hidden;
         transition: 300ms all;
-        cursor: pointer; 
+        cursor: pointer;
     }
 
 }
