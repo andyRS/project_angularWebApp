@@ -554,13 +554,11 @@ textarea{
   .menu-responsivo img {
         overflow: hidden;
         display: block;
-        width: 39px;
-        left: 429px;
+        width: 8%;
         margin: 0px;
         padding: 0px;
         top: 29px;
-        
-       
+      
         transition: 300ms all;
         cursor: pointer;
     }
