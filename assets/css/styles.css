@@ -553,7 +553,7 @@ textarea{
 
   .menu-responsivo img {
         overflow: hidden;
-        display: block;
+        display: inline-block;
         width: 8%;
         margin: 0px;
         padding: 0px;
