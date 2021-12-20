@@ -552,6 +552,7 @@ textarea{
     }
 
   .menu-responsivo img {
+        overflow: hidden;
         display: block;
         width: 39px;
         left: 429px;
@@ -559,7 +560,7 @@ textarea{
         padding: 0px;
         top: 29px;
         
-        overflow: hidden;
+       
         transition: 300ms all;
         cursor: pointer;
     }
