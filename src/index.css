@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-neutral-50 text-neutral-900 antialiased;
+  }
+
+  /* Mejorar legibilidad */
+  p {
+    @apply leading-relaxed;
+  }
+
+  /* Headings optimizados */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+
+  /* Links accesibles */
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Focus visible para accesibilidad */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+  }
+}
+
+@layer components {
+  /* Contenedor principal */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Card con glassmorphism */
+  .card-glass {
+    @apply bg-white/80 backdrop-blur-lg rounded-2xl shadow-glass border border-white/20;
+  }
+
+  /* Gradiente de texto */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent;
+  }
+
+  /* Botón premium */
+  .btn-premium {
+    @apply relative overflow-hidden bg-gradient-tech text-white font-semibold px-6 py-3 rounded-lg 
+           transition-all duration-300 hover:shadow-glow hover:scale-105 
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+
+  /* Badge de categoría */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium 
+           bg-primary-100 text-primary-800 hover:bg-primary-200 transition-colors;
+  }
+
+  /* Skeleton loader */
+  .skeleton {
+    @apply animate-pulse bg-neutral-200 rounded;
+  }
+
+  /* Code block */
+  .code-block {
+    @apply bg-code-bg text-code-text font-mono text-sm p-4 rounded-lg overflow-x-auto;
+  }
+}
+
+@layer utilities {
+  /* Scrollbar personalizada */
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    @apply bg-neutral-100 rounded-full;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    @apply bg-neutral-300 rounded-full hover:bg-neutral-400;
+  }
+
+  /* Animaciones de entrada */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Línea de gradiente */
+  .gradient-line {
+    @apply h-1 w-full bg-gradient-tech rounded-full;
+  }
+}
+
+/* Estilos para modo oscuro (opcional) */
+@media (prefers-color-scheme: dark) {
+  /* Puedes descomentar esto si quieres soporte automático de dark mode */
+  /*
+  body {
+    @apply bg-neutral-950 text-neutral-100;
+  }
+  */
+}
+
+/* Optimizaciones de rendimiento */
+@layer utilities {
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+}
+
+/* Accesibilidad mejorada */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mejoras de SEO - Schema.org markup styling */
+.article-content {
+  @apply max-w-none;
+  @apply leading-relaxed text-neutral-700;
+}
